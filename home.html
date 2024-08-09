@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Sawari Bhada</title>
+    <link rel = "icon" type = "image/x-icon" href = "/images/android-chrome-192x192.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <a href="home.html" class="logo"><img src="images/Sawari.jpg" alt="Sawari Bhada"></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="fleets.html">Browse Our Vehicles</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="#about">About Us</a></li>
+            
+        </ul>
+        <div class="header-btn">
+            <a href = "reservation.html" class = "Check-status-btn">Check Reservation Status</a>
+            
+        </div>
+    </header>
+    
+    <!-- Home -->
+    <section class="home" id="home">
+        <div class="text">
+            <h1><span>Looking</span> to <br>rent a car?</h1> 
+            <p>This site brings you the best car in rent with a reasonable price.</p>
+            <p>Now in Kathmandu, Pokhara and Chitwan</p>
+        </div>
+        <div class="form-container">
+            <form action="fleets.html">
+                <div class="input-box">
+                    <span>Location</span>
+                    <input list="locations" type="search" name="location" id="locationInput" placeholder="Search Places">
+                    <datalist id="locations">
+                        <option value="Kathmandu">
+                        <option value="Pokhara">
+                        <option value="Chitwan">
+                    </datalist>
+                    
+                </div>
+                <div class="input-box">
+                    <span>Pick-Up Date</span>
+                    <input type="date" name="" id="">
+                </div>
+                <div class="input-box">
+                    <span>Return Date</span>
+                    <input type="date" name="" id="">
+                </div>
+                <input type="submit" name="" id="" class="btn">
+            </form>
+        </div>
+    </section>
+
+    <!-- Ride -->
+    <section class="ride" id="ride">
+        <div class="heading">
+            <span>How It Work</span>
+            <h1>Rent with 3 Easy Steps</h1>
+        </div>
+        <div class="ride-container">
+            <div class="box">
+                <i class='bx bxs-map' ></i>
+                <h2>Choose a Location</h2>
+                <p>Here, all you have to do is choose a location where you want to explore.</p>
+            </div>
+            <div class="box">
+                <i class='bx bx-calendar-check' ></i>
+                <h2>Pick-Up Date</h2>
+                <p>Select the date when you want to rent the car along with the date/time period you are expected to return it.</p>
+            </div>
+            <div class="box">
+                <i class='bx bxs-book'></i>
+                <h2>Book A Car</h2>
+                <p>Select the car model which you want to rent for and book it.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="recommended" id="recommended">
+        <div class="heading">
+            <span>Recommended for You</span>
+            <h1>Explore Our Top Picks</h1>
+            
+        </div>
+        <div class="recommended-container" id="recommended-container">
+            <!-- Recommended cars will be dynamically added here -->
+        </div>
+        
+        
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="section-title">About Us</h2>
+                    <h1>Welcome to SawariBhada!</h1>
+                    <p>We are passionate about providing convenient and reliable transportation solutions for all your travel needs. Our team is dedicated to ensuring a seamless experience from booking to drop-off.</p>
+                    <p>At SawariBhada, we strive for excellence in everything we do. With a focus on customer satisfaction and safety, we aim to exceed your expectations and make your journey enjoyable.</p>
+                    <p>Our journey began in 2024 with a vision to simplify car rentals and empower travelers to explore new destinations with ease. Since then, we have grown into a trusted partner for countless clients, offering a wide range of vehicles and exceptional service.</p>
+    
+                </div>
+              
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="footer-content">
+            <div class="payment-methods">
+                <p>We accept VISA, MASTERCARD and Cash upon pickup as well.</p>
+            </div>
+            <div class="admin-login">
+                <button id="admin-login-btn">Admin Login</button>
+            </div>
+            <div class="contact-details">
+                <p>Contact Us:</p>
+                <p>Phone: 98000000</p>
+                <p>Email: sawaribhada@gmail.com</p>
+            </div>
+            <div class="social-media">
+                <p>Follow Us:</p>
+                <!-- Add your social media icons/handles here -->
+                <!-- Example: -->
+                <p>
+                    <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    
+                    
+                </p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 Sawari Bhada. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Link To JS -->
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('admin-login-btn').addEventListener('click', function() {
+                window.location.href = 'admin.html';
+            });
+        });
+
+        // Function to fetch recommended cars from the server
+        function fetchRecommendedCars() {
+            fetch('getRecommendedCars.php')
+                .then(response => response.json())
+                .then(data => {
+                    // Clear existing content
+                    document.getElementById('recommended-container').innerHTML = '';
+
+                    // Populate HTML with fetched data
+                    data.forEach(car => {
+                        const carCard = `
+                            <div class = "car-card">
+                                <img src="${car.Image}" alt="${car.Model}">
+                                <h3>${car.Company} ${car.Model}</h3>
+                                <p>Price: ${car.Rental_Price}</p>
+                                <p>Rating: ${car.Rating}</p>
+                                <p> Fuel Type: ${car.FuelType}</p>
+                                <a href="rental_form.php" class="btn">Book Now!</a>
+                            </div>
+
+
+                        `;
+                        document.getElementById('recommended-container').innerHTML += carCard;
+                    });
+                })
+                .catch(error => console.error('Error fetching recommended cars:', error));
+        }
+
+        // Call the function to fetch and display recommended cars when the page loads
+        document.addEventListener('DOMContentLoaded', fetchRecommendedCars);
+    </script>
+</body>
+</html>
