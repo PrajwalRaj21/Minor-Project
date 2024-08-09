@@ -38,12 +38,15 @@ Once the application is running, you can explore the following features:
 Here are some screenshots of the application:
 
 - **OTP Verification**: ![OTP](https://github.com/user-attachments/assets/4a91201d-12b1-433a-aac0-7d9bd9132fd0)
+  
    *Description: The OTP verification screen where users enter the one-time password received via email or phone to complete their booking process.*
 
 - **Front Page**: ![front pro](https://github.com/user-attachments/assets/9f9e26a8-f757-40df-938f-fcd95050b362)
+  
    *Description: The front page of the car rental website, featuring an intuitive design that allows users to browse available vehicles and access various site functionalities.*
 
 - **Fleet of Vehicles**: ![fleet](https://github.com/user-attachments/assets/04b20200-fbea-4de6-bd64-d7d62f2bf1a6)
+  
    *Description: A view of the fleet of vehicles available for rent, showcasing a range of options from compact cars to premium SUVs.*
 
 
