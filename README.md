@@ -1,6 +1,4 @@
-![OTP](https://github.com/user-attachments/assets/4a91201d-12b1-433a-aac0-7d9bd9132fd0)
-![front pro](https://github.com/user-attachments/assets/9f9e26a8-f757-40df-938f-fcd95050b362)
-![fleet](https://github.com/user-attachments/assets/04b20200-fbea-4de6-bd64-d7d62f2bf1a6)
+
 # Car Rental Website
 
 Welcome to our Car Rental Website, a comprehensive solution designed to simplify the vehicle rental process for users. Developed as a minor project for our college, this platform leverages the power of PHP and modern web technologies to offer a seamless and secure car rental experience.
