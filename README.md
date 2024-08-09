@@ -34,4 +34,8 @@ Once the application is running, you can explore the following features:
 - **Manage Bookings**: View and manage your bookings through the user dashboard.
 - **Receive Personalized Recommendations**: Get suggestions tailored to your preferences and past activities.
 
+ ![OTP](https://github.com/user-attachments/assets/4a91201d-12b1-433a-aac0-7d9bd9132fd0)
+![front pro](https://github.com/user-attachments/assets/9f9e26a8-f757-40df-938f-fcd95050b362)
+![fleet](https://github.com/user-attachments/assets/04b20200-fbea-4de6-bd64-d7d62f2bf1a6)
+
 
